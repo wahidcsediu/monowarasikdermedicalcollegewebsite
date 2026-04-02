@@ -16,7 +16,7 @@ export const Departments = () => {
       <section className="bg-emerald-950 py-24 md:py-32 text-white text-center">
         <div className="container-custom">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <TextReveal text="Our Departments" />
+            <TextReveal text="Our Clinical Departments" />
           </h1>
           <p className="text-emerald-100/60 max-w-2xl mx-auto text-lg">
             Explore our wide range of specialized medical departments, each equipped with modern technology and expert staff.
@@ -144,15 +144,11 @@ export const DepartmentDetail = ({ id }: { id?: string }) => {
                 <h3 className="text-xl font-bold mb-6">Department Hours</h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex justify-between border-b border-white/10 pb-2">
-                    <span>Mon - Fri</span>
+                    <span>Wed - Mon</span>
                     <span className="text-emerald-400">08:00 AM - 08:00 PM</span>
                   </li>
-                  <li className="flex justify-between border-b border-white/10 pb-2">
-                    <span>Saturday</span>
-                    <span className="text-emerald-400">09:00 AM - 05:00 PM</span>
-                  </li>
                   <li className="flex justify-between">
-                    <span>Sunday</span>
+                    <span>Tuesday</span>
                     <span className="text-red-400">Emergency Only</span>
                   </li>
                 </ul>

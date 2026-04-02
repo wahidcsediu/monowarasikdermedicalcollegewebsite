@@ -339,7 +339,7 @@ export const Home = () => {
           <Reveal>
             <SectionHeader 
               subtitle="Our Specializations" 
-              title="Comprehensive Medical Departments" 
+              title="Our Clinical Departments" 
               centered 
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -370,7 +370,7 @@ export const Home = () => {
             </div>
             <div className="mt-12 text-center">
               <Link to="/departments">
-                <NeonButton>Explore All Departments</NeonButton>
+                <NeonButton>Explore All Clinical Departments</NeonButton>
               </Link>
             </div>
           </Reveal>

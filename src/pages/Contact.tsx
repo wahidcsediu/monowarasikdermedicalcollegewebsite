@@ -66,7 +66,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-emerald-950 group-hover:text-emerald-600 transition-colors">Working Hours</h4>
-                      <p className="text-slate-600 text-sm">Mon - Sat: 08:00 AM - 08:00 PM<br />Sunday: Emergency Only</p>
+                      <p className="text-slate-600 text-sm">Wed - Mon: 08:00 AM - 08:00 PM<br />Tuesday: Emergency Only</p>
                     </div>
                   </div>
                 </div>

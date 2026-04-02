@@ -110,7 +110,7 @@ export const Academics = () => {
               { label: 'Duration', value: '5 Years + 1 Year Mandatory Logbook based Rotatory Internship' },
               { label: 'Selection Procedure', value: 'According to decision by the proper competent authority as per merit.' },
               { label: 'Prerequisites', value: 'HSC or equivalent with Science (Biology, Physics, Chemistry)' },
-              { label: 'Grade Requirements', value: 'Candidate has to secure required grade point in the SSC and HSC examinations.' },
+              { label: 'Grade Requirements', value: 'Candidate has to secure required grade point in the SSC and HSC examinations as per rules & regulation of the government of Bangladesh.' },
             ].map((info) => (
               <div key={info.label} className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
                 <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">{info.label}</p>

@@ -26,7 +26,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Departments', path: '/departments', hasMega: true },
+    { name: 'Clinical Departments', path: '/departments', hasMega: true },
     { name: 'Faculty', path: '/faculty' },
     { name: 'Services', path: '/services' },
     { name: 'Academics', path: '/academics' },
@@ -224,7 +224,7 @@ export const Footer = () => {
 
           {/* Departments */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Departments</h3>
+            <h3 className="text-lg font-semibold mb-6">Clinical Departments</h3>
             <ul className="space-y-4 text-emerald-100/60 text-sm">
               {DEPARTMENTS.slice(0, 5).map(dept => (
                 <li key={dept.id}><Link to={`/departments/${dept.id}`} className="hover:text-emerald-400 transition-colors">{dept.name}</Link></li>

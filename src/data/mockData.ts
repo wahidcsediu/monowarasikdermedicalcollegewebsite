@@ -18,15 +18,6 @@ export const DEPARTMENTS = [
     wards: 2 
   },
   { 
-    id: 'paediatrics', 
-    name: 'Department of Paediatrics', 
-    icon: 'Baby', 
-    description: 'Focuses on excellence in clinical care for children, serving 100+ outpatients daily with a 30-bed ward and 10-bed NICU.',
-    longDescription: 'The Department of Paediatrics consists of one professor, two associate professors, two assistant professors, one assistant registrar and six medical officers. Our goal is to continuously evolve to become one of the world\'s leading academic departments of paediatrics, focusing on excellence in clinical care. We teach undergraduate students from 3rd year to 5th year in the form of lectures, tutorials and clinical classes. We conduct clinical meetings, seminars and journal clubs to keep ourselves updated about the recent advances. Our enthusiastic and dedicated team runs the hospital in a very professional way. We serve more than 100 patients daily in the outpatient department, examine them clinically, do relevant investigations and provide them with appropriate treatment with necessary advices. The patients who need intensive treatment, get admitted in the inpatient department. Our inpatient department consist of 30 bed ward and 10 bed NICU',
-    beds: 40, 
-    wards: 1 
-  },
-  { 
     id: 'cardiology', 
     name: 'Department of Cardiology', 
     icon: 'Heart', 
@@ -590,16 +581,6 @@ export const DOCTORS = [
     experience: '3+ Years',
     image: 'https://lh3.googleusercontent.com/d/13I2fme5OGbsbS5JAsSxet0o0Sz-rZspF',
     message: 'Specialized in skin care and dermatological treatments.',
-  },
-  {
-    id: 'dr-nahal-islam-neeva-paediatrics',
-    name: 'Dr. Nahal Islam Neeva',
-    specialty: 'Paediatrics',
-    qualification: 'MBBS',
-    designation: 'Lecturer',
-    experience: '5+ Years',
-    image: 'https://lh3.googleusercontent.com/d/13I2fme5OGbsbS5JAsSxet0o0Sz-rZspF',
-    message: 'Caring for children with compassion and expertise.',
   },
 ];
 

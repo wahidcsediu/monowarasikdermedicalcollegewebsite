@@ -26,7 +26,7 @@ export const HospitalServices = () => {
     },
     {
       title: 'Specialized Clinics',
-      description: 'Consultations in Cardiology, Paediatrics, ENT, and more available during OPD hours.',
+      description: 'Consultations in Cardiology, Medicine, Surgery, ENT, and more available during OPD hours.',
       icon: CalendarCheck,
       color: 'bg-amber-50 text-amber-600'
     },
@@ -110,17 +110,16 @@ export const HospitalServices = () => {
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {[
-                  { s: 1, d: 'Medicine', w: '02', b: 60 },
-                  { s: 2, d: 'Surgery', w: '02', b: 60 },
+                  { s: 1, d: 'Medicine', w: '02', b: 70 },
+                  { s: 2, d: 'Surgery', w: '02', b: 70 },
                   { s: 3, d: 'Gynaecology', w: '01', b: 30 },
                   { s: 4, d: 'Obstetrics', w: '01', b: 30 },
                   { s: 5, d: 'Ophthalmology', w: '01', b: 5 },
                   { s: 6, d: 'ENT', w: '01', b: 10 },
-                  { s: 7, d: 'Paediatrics', w: '01', b: 20 },
-                  { s: 8, d: 'Orthopedics', w: '01', b: 15 },
-                  { s: 9, d: 'Cardiology', w: '01', b: 10 },
-                  { s: 10, d: 'Dermatology', w: '01', b: 5 },
-                  { s: 11, d: 'Casualty', w: '01', b: 5 },
+                  { s: 7, d: 'Orthopedics', w: '01', b: 15 },
+                  { s: 8, d: 'Cardiology', w: '01', b: 10 },
+                  { s: 9, d: 'Dermatology', w: '01', b: 5 },
+                  { s: 10, d: 'Casualty', w: '01', b: 5 },
                 ].map((row, i) => (
                   <tr key={row.s} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                     <td className="p-6 text-slate-600 font-mono">{row.s.toString().padStart(2, '0')}</td>
@@ -143,7 +142,7 @@ export const HospitalServices = () => {
       <section className="section-padding bg-slate-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-emerald-950 mb-4">Our Departments</h2>
+            <h2 className="text-3xl font-bold text-emerald-950 mb-4">Our Clinical Departments</h2>
             <p className="text-slate-600">Specialized clinical and academic services across all major medical disciplines.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
