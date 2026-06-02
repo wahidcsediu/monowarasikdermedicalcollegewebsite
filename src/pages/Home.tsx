@@ -183,7 +183,7 @@ export const Home = () => {
               View All Faculty
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {DOCTORS.slice(0, 3).map((doc, i) => (
               <motion.div
                 key={doc.id}
@@ -192,14 +192,20 @@ export const Home = () => {
                 transition={{ delay: i * 0.1, duration: 0.8 }}
                 className="group"
               >
-                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border border-slate-100 flex items-center justify-center">
-                  <img 
-                    src={doc.image} 
-                    alt="Faculty Member" 
-                    className="w-full h-auto block group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
+                <Link to={`/faculty/${doc.id}`}>
+                  <div className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500">
+                    <h3 className="text-2xl font-bold text-emerald-950 group-hover:text-emerald-600 transition-colors mb-2">
+                      {doc.name}
+                    </h3>
+                    <p className="text-emerald-600 font-bold mb-4">
+                      {doc.designation || doc.specialty}
+                    </p>
+                    <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-emerald-600 font-bold text-sm">
+                      <span>View Profile</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -248,7 +254,7 @@ export const Home = () => {
             <div className="h-px w-12 bg-emerald-500/20" />
             <div className="flex gap-4">
               {[
-                { icon: Facebook, href: '#', label: 'Facebook' },
+                { icon: Facebook, href: 'https://www.facebook.com/msmchbd', label: 'Facebook' },
                 { icon: Twitter, href: '#', label: 'Twitter' },
                 { icon: Instagram, href: '#', label: 'Instagram' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -257,6 +263,8 @@ export const Home = () => {
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.1 }}
@@ -449,6 +457,27 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      {/* Map Section */}
+      <div className="container-custom pb-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="h-[500px] w-full bg-slate-100 relative group overflow-hidden rounded-[3rem] shadow-2xl border border-emerald-100"
+        >
+          <iframe 
+            src="https://maps.google.com/maps?q=Monowara%20Sikder%20Medical%20College%20%26%20Hospital&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy"
+            title="Google Map"
+            className="relative z-10"
+          ></iframe>
+          <div className="absolute inset-0 bg-emerald-500/5 pointer-events-none z-20 group-hover:bg-transparent transition-colors duration-500" />
+        </motion.section>
+      </div>
     </div>
   );
 };

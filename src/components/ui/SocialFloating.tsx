@@ -4,7 +4,7 @@ import { Facebook, Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export const SocialFloating = () => {
   const socials = [
-    { icon: Facebook, href: '#', color: 'bg-[#1877F2]' },
+    { icon: Facebook, href: 'https://www.facebook.com/msmchbd', color: 'bg-[#1877F2]' },
     { icon: Linkedin, href: '#', color: 'bg-[#0A66C2]' },
     { icon: Twitter, href: '#', color: 'bg-[#1DA1F2]' },
     { icon: Instagram, href: '#', color: 'bg-[#E4405F]' },

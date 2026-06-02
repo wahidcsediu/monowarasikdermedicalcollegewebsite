@@ -20,7 +20,7 @@ const urls = [
 async function extractFaculty() {
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
-    contents: "Extract all faculty information from the provided URLs. For each faculty member, provide: id (kebab-case name), name, specialty, qualification, designation, experience (default '5+ Years' if not found), image (default 'https://lh3.googleusercontent.com/d/13I2fme5OGbsbS5JAsSxet0o0Sz-rZspF'), and a short professional message.",
+    contents: "Extract all faculty information from the provided URLs. There should be exactly 57 teachers in total. For each faculty member, provide: id (kebab-case name), name, specialty, qualification, designation, experience (ONLY if provided in the source, otherwise leave as empty string), image (default 'https://lh3.googleusercontent.com/d/13I2fme5OGbsbS5JAsSxet0o0Sz-rZspF'), and a short professional message (ONLY if provided in the source, otherwise leave as empty string). Do not add any information that is not in the source documents.",
     config: {
       tools: [{ urlContext: {} }],
       responseMimeType: "application/json",

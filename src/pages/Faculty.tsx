@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Award, BookOpen, Clock, ArrowRight } from 'lucide-react';
+import { Award, BookOpen, ArrowRight } from 'lucide-react';
 import { DOCTORS } from '@/src/data/mockData';
 import { NeonButton, GlassCard, FloatingShapes, TextReveal } from '@/src/components/ui/Common';
 
@@ -69,10 +69,6 @@ export const Faculty = () => {
                               <Award size={14} className="mr-2 text-emerald-500" />
                               <span>{doc.qualification}</span>
                             </div>
-                            <div className="flex items-center text-xs text-slate-500">
-                              <Clock size={14} className="mr-2 text-emerald-500" />
-                              <span>{doc.experience} Experience</span>
-                            </div>
                           </div>
                         </div>
                         <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-emerald-600 font-bold text-sm">
@@ -111,10 +107,6 @@ export const DoctorProfile = ({ id }: { id?: string }) => {
                   <Award size={20} className="text-emerald-400" />
                   <span className="text-sm font-medium">{doctor.qualification}</span>
                 </GlassCard>
-                <GlassCard className="py-3 px-6 flex items-center space-x-3">
-                  <Clock size={20} className="text-emerald-400" />
-                  <span className="text-sm font-medium">{doctor.experience} Exp.</span>
-                </GlassCard>
               </div>
             </div>
           </div>
@@ -130,11 +122,11 @@ export const DoctorProfile = ({ id }: { id?: string }) => {
                   <TextReveal text="About the Doctor" />
                 </h2>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  {doctor.message} With over {doctor.experience} of experience in {doctor.specialty}, {doctor.name} has been a key member of our medical team. He is known for his patient-centric approach and commitment to medical excellence.
+                  {doctor.message || `${doctor.name} is a dedicated member of the ${doctor.specialty} department at Monowara Sikder Medical College, committed to medical excellence and patient-centric care.`}
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-bold text-emerald-950 mb-6 flex items-center">
                     <BookOpen size={24} className="mr-3 text-emerald-600" />
@@ -145,6 +137,27 @@ export const DoctorProfile = ({ id }: { id?: string }) => {
                       <li key={item} className="flex items-center space-x-3 text-slate-600">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-emerald-950 mb-6 flex items-center">
+                    <Award size={24} className="mr-3 text-emerald-600" />
+                    Professional Details
+                  </h3>
+                  <ul className="space-y-4">
+                    {[
+                      { label: 'BM&DC Reg. No.', value: doctor.bmdcReg },
+                      { label: 'Date of Birth', value: doctor.dob },
+                      { label: 'Date of Joining', value: doctor.joiningDate },
+                      { label: 'Experience', value: doctor.experience },
+                      { label: 'Remarks', value: doctor.remarks }
+                    ].map(item => item.value && (
+                      <li key={item.label} className="flex flex-col space-y-1">
+                        <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">{item.label}</span>
+                        <span className="text-slate-700 font-medium">{item.value}</span>
                       </li>
                     ))}
                   </ul>
@@ -165,24 +178,6 @@ export const DoctorProfile = ({ id }: { id?: string }) => {
                   </select>
                   <NeonButton className="w-full">Confirm Booking</NeonButton>
                 </form>
-              </div>
-              
-              <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100">
-                <h3 className="text-xl font-bold text-emerald-950 mb-6">Contact Details</h3>
-                <div className="space-y-4 text-sm text-slate-600">
-                  <div className="flex items-center space-x-3">
-                    <Mail size={18} className="text-emerald-500" />
-                    <span>{doctor.id}@msmch.edu.bd</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone size={18} className="text-emerald-500" />
-                    <span>+880 1746 069727</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Globe size={18} className="text-emerald-500" />
-                    <span>www.msmch.run.app</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

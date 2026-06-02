@@ -166,45 +166,6 @@ export const About = () => {
         </div>
       </section>
 
-      {/* Chairperson's Message */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="bg-emerald-950 rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row gap-16 items-start text-white">
-            <div className="w-64 h-64 lg:w-80 lg:h-80 shrink-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-500/30">
-              <img 
-                src="https://lh3.googleusercontent.com/d/1Zr_GN9VrTdwgt-4ZIYJHUuzj4g2Jgg8p" 
-                alt="Chairperson" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1">
-              <span className="text-emerald-400 font-bold text-sm uppercase tracking-widest mb-4 block">Message From Chairperson</span>
-              <h2 className="text-3xl font-bold mb-4">Bismillahir Rahmanir Rahim</h2>
-              <p className="text-emerald-200 italic mb-8">In the Name of Allah, the Most Beneficent, the Most Merciful</p>
-              <div className="space-y-6 text-emerald-100/80 text-base leading-relaxed max-h-[500px] overflow-y-auto pr-4 custom-scrollbar">
-                <p>
-                  At the very begining, I would like to pay my deepest respect and heartfelt remembrance to Late Mr. Zainul Haque Sikder, the Hon’ble Founder Chairman of Monowara Sikder Medical College & Hospital—a visionary leader whose noble ideals continue to guide and inspire us.
-                </p>
-                <p>
-                  Our college is blessed with distinguished faculty members, dedicated staff, and most importantly, our brilliant and promising students. As Chairperson, I feel immense pride and gratitude in witnessing how this institution continues to grow as a beacon of knowledge, service, and humanity.
-                </p>
-                <p>
-                  To our beloved students, I extend my warmest congratulations and heartfelt encouragement. Choosing the noble path of medicine is a calling that demands patience, perseverance, and a passion to serve humanity. At Monowara Sikder Medical College, we strive to nurture in every student the values of empathy, dedication, and ethical excellence.
-                </p>
-                <p>
-                  Looking ahead, I feel a profound sense of optimism and pride. Monowara Sikder Medical College and Hospital will continue to uphold the highest standards of medical education, research, and service to humanity. We aim to produce doctors who not only cure diseases but also bring hope and healing to society.
-                </p>
-                <p className="font-bold text-emerald-400 pt-4">Allah Hafez.</p>
-              </div>
-              <div className="mt-10">
-                <div className="font-bold text-white text-xl">Mrs. Monowara Sikder</div>
-                <div className="text-emerald-400">Chairperson, MSMCH</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Principal's Message */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -222,16 +183,22 @@ export const About = () => {
               <p className="text-emerald-600 italic mb-8">In the Name of Allah, the Most Beneficent, the Most Merciful</p>
               <div className="space-y-6 text-slate-600 text-base leading-relaxed max-h-[500px] overflow-y-auto pr-4 custom-scrollbar text-justify">
                 <p>
-                  It gives me immense pleasure to welcome you all to Monowara Sikder Medical College and Hospital, an institution dedicated to academic excellence, professional integrity, and compassionate healthcare.
+                  It gives me immense pleasure to welcome you all to Monowara Sikder Medical College and Hospital, an institution dedicated to academic excellence, professional integrity, and compassionate healthcare. Our college was founded with a noble vision — to create a centre of excellence in medical education where knowledge, skill, and humanity blend together to produce competent, ethical, and compassionate doctors. We take pride in providing our students with a learning environment that is both intellectually stimulating and morally enriching.
                 </p>
                 <p>
-                  Our college was founded with a noble vision — to create a centre of excellence in medical education where knowledge, skill, and humanity blend together to produce competent, ethical, and compassionate doctors.
+                  The medical profession is one of service and sacrifice. As students of this noble discipline, you have chosen a path that calls for deep commitment, lifelong learning, and an unwavering sense of responsibility to humanity. At Monowara Sikder Medical College, we are devoted to shaping your journey with the highest standards of education, research, and clinical training.
                 </p>
                 <p>
-                  The medical profession is one of service and sacrifice. At Monowara Sikder Medical College, we are devoted to shaping your journey with the highest standards of education, research, and clinical training.
+                  Our highly qualified faculty members play a pivotal role in guiding students through rigorous academic and clinical programs. Their expertise, mentorship, and dedication inspire students to reach their fullest potential. Alongside them, our efficient administrative and clinical staff ensure that the institution runs smoothly and effectively, maintaining an atmosphere of discipline, respect, and cooperation.
                 </p>
                 <p>
-                  We are proud of our modern facilities, well-equipped laboratories, enriched library, and advanced hospital setup that offer our students an exceptional learning experience. Our emphasis is not only on academic excellence but also on developing compassion, professionalism, and leadership qualities.
+                  We are proud of our modern facilities, well-equipped laboratories, enriched library, and advanced hospital setup that offer our students an exceptional learning experience. Our emphasis is not only on academic excellence but also on developing compassion, professionalism, and leadership qualities that define the true spirit of medicine.
+                </p>
+                <p>
+                  To our beloved students, I say—embrace every opportunity to learn, serve, and grow. Remember that being a doctor is not only about curing illness but also about healing hearts and uplifting lives. Let honesty, empathy, and humility be your guiding principles throughout your journey.
+                </p>
+                <p>
+                  May Monowara Sikder Medical College and Hospital continue to flourish as a symbol of dedication, discipline, and devotion in the field of medical education. Together, let us work towards a healthier, happier, and more humane world.
                 </p>
                 <p className="font-bold text-emerald-600 pt-4">Allah Hafez.</p>
               </div>

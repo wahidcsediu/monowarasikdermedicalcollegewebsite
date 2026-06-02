@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin, Search, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { DEPARTMENTS } from '@/src/data/mockData';
 import { cn } from '@/src/lib/utils';
 import { ThemeToggle } from '@/src/components/ui/ThemeToggle';
@@ -200,10 +200,15 @@ export const Footer = () => {
               Providing world-class medical education and healthcare services with compassion and excellence.
             </p>
             <div className="flex space-x-4">
-              {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
-                <a key={social} href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-500 transition-colors">
-                  <span className="sr-only">{social}</span>
-                  <div className="w-4 h-4 bg-current rounded-sm" />
+              {[
+                { name: 'facebook', icon: Facebook, href: 'https://www.facebook.com/msmchbd' },
+                { name: 'twitter', icon: Twitter, href: '#' },
+                { name: 'instagram', icon: Instagram, href: '#' },
+                { name: 'linkedin', icon: Linkedin, href: '#' }
+              ].map((social) => (
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-500 transition-all hover:scale-110">
+                  <span className="sr-only">{social.name}</span>
+                  <social.icon size={18} />
                 </a>
               ))}
             </div>
